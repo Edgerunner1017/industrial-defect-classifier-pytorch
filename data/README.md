@@ -38,27 +38,27 @@ Use ImageFolder format:
 
 ```text
 data/
-├── train/
-│   ├── scratch/
-│   ├── crack/
-│   ├── inclusion/
-│   ├── pitted_surface/
-│   ├── rolled_scale/
-│   └── patches/
-├── val/
-│   ├── scratch/
-│   ├── crack/
-│   ├── inclusion/
-│   ├── pitted_surface/
-│   ├── rolled_scale/
-│   └── patches/
-└── test/
-    ├── scratch/
-    ├── crack/
-    ├── inclusion/
-    ├── pitted_surface/
-    ├── rolled_scale/
-    └── patches/
+|-- train/
+|   |-- scratch/
+|   |-- crack/
+|   |-- inclusion/
+|   |-- pitted_surface/
+|   |-- rolled_scale/
+|   `-- patches/
+|-- val/
+|   |-- scratch/
+|   |-- crack/
+|   |-- inclusion/
+|   |-- pitted_surface/
+|   |-- rolled_scale/
+|   `-- patches/
+`-- test/
+    |-- scratch/
+    |-- crack/
+    |-- inclusion/
+    |-- pitted_surface/
+    |-- rolled_scale/
+    `-- patches/
 ```
 
 ## Split Rule
@@ -87,4 +87,3 @@ Image size:
 Official split:
 Local path:
 ```
-

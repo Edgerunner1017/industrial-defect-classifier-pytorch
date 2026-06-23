@@ -45,33 +45,33 @@ The exact class names may change depending on the selected dataset. Any mapping 
 
 ```text
 industrial-defect-classifier-pytorch/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── configs/
-│   ├── README.md
-│   ├── resnet18.yaml
-│   └── efficientnet_b0.yaml
-├── data/
-│   └── README.md
-├── src/
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── predict.py
-│   ├── datasets.py
-│   ├── models.py
-│   ├── transforms.py
-│   └── utils.py
-├── notebooks/
-│   └── data_exploration.ipynb
-├── outputs/
-│   └── README.md
-├── checkpoints/
-│   └── README.md
-└── docs/
-    ├── project_structure.md
-    ├── engineering_standards.md
-    └── roadmap.md
+|-- README.md
+|-- requirements.txt
+|-- .gitignore
+|-- configs/
+|   |-- README.md
+|   |-- resnet18.yaml
+|   `-- efficientnet_b0.yaml
+|-- data/
+|   `-- README.md
+|-- src/
+|   |-- train.py
+|   |-- evaluate.py
+|   |-- predict.py
+|   |-- datasets.py
+|   |-- models.py
+|   |-- transforms.py
+|   `-- utils.py
+|-- notebooks/
+|   `-- data_exploration.ipynb
+|-- outputs/
+|   `-- README.md
+|-- checkpoints/
+|   `-- README.md
+`-- docs/
+    |-- project_structure.md
+    |-- engineering_standards.md
+    `-- roadmap.md
 ```
 
 ## Development Phases
@@ -92,11 +92,17 @@ Step 1 is complete:
 - Baseline model: ResNet18.
 - Main metrics: accuracy, macro F1, and confusion matrix.
 
-Step 2 is in progress:
+Step 2 is complete:
 
 - Repository structure.
 - Documentation rules.
 - Engineering conventions.
+
+Step 3 is in progress:
+
+- Minimal command-line skeleton.
+- ResNet18 baseline config draft.
+- Source module placeholders for dataset, model, transforms, and utilities.
 
 ## Documentation
 
@@ -106,4 +112,3 @@ Step 2 is in progress:
 - [Dataset Guide](data/README.md)
 - [Outputs Guide](outputs/README.md)
 - [Checkpoints Guide](checkpoints/README.md)
-

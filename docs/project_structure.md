@@ -24,9 +24,9 @@ Planned files:
 
 ```text
 configs/
-├── README.md
-├── resnet18.yaml
-└── efficientnet_b0.yaml
+|-- README.md
+|-- resnet18.yaml
+`-- efficientnet_b0.yaml
 ```
 
 Each config file should define:
@@ -58,18 +58,18 @@ Expected ImageFolder layout:
 
 ```text
 data/
-├── train/
-│   ├── scratch/
-│   ├── crack/
-│   └── ...
-├── val/
-│   ├── scratch/
-│   ├── crack/
-│   └── ...
-└── test/
-    ├── scratch/
-    ├── crack/
-    └── ...
+|-- train/
+|   |-- scratch/
+|   |-- crack/
+|   `-- ...
+|-- val/
+|   |-- scratch/
+|   |-- crack/
+|   `-- ...
+`-- test/
+    |-- scratch/
+    |-- crack/
+    `-- ...
 ```
 
 ## src/
@@ -80,13 +80,13 @@ Planned modules:
 
 ```text
 src/
-├── train.py
-├── evaluate.py
-├── predict.py
-├── datasets.py
-├── models.py
-├── transforms.py
-└── utils.py
+|-- train.py
+|-- evaluate.py
+|-- predict.py
+|-- datasets.py
+|-- models.py
+|-- transforms.py
+`-- utils.py
 ```
 
 Responsibilities:
@@ -115,10 +115,10 @@ Typical files:
 
 ```text
 outputs/
-├── metrics.json
-├── confusion_matrix.png
-├── training_curves.png
-└── sample_predictions.png
+|-- metrics.json
+|-- confusion_matrix.png
+|-- training_curves.png
+`-- sample_predictions.png
 ```
 
 Large or frequently regenerated files should not be committed unless they are useful for the README.
@@ -140,4 +140,3 @@ docs/project_structure.md
 docs/engineering_standards.md
 docs/roadmap.md
 ```
-

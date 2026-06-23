@@ -1,0 +1,40 @@
+project:
+  name: industrial-defect-classifier-pytorch
+  experiment_name: resnet18_baseline
+  seed: 42
+
+data:
+  root: data
+  train_dir: data/train
+  val_dir: data/val
+  test_dir: data/test
+  image_size: 224
+  classes:
+    - scratch
+    - crack
+    - inclusion
+    - pitted_surface
+    - rolled_scale
+    - patches
+
+model:
+  name: resnet18
+  pretrained: true
+  num_classes: 6
+
+training:
+  epochs: 20
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  num_workers: 4
+  device: auto
+
+outputs:
+  output_dir: outputs/resnet18_baseline
+  checkpoint_dir: checkpoints
+  best_checkpoint_name: resnet18_best.pth
+  metric_for_best: macro_f1
+

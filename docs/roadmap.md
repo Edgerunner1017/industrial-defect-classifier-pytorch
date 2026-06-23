@@ -29,7 +29,7 @@ patches
 
 ## Phase 2: Repository Structure
 
-Status: in progress.
+Status: complete.
 
 Goals:
 
@@ -49,7 +49,7 @@ Completion criteria:
 
 ## Phase 3: Minimum Training Pipeline
 
-Status: planned.
+Status: in progress.
 
 Goals:
 
@@ -123,4 +123,3 @@ Future extensions:
 - ONNX export.
 - TensorRT deployment.
 - Simple web or desktop demo.
-
