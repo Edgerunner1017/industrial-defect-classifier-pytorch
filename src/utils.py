@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+import random
 from pathlib import Path
 from typing import Any
+
+import numpy
+import torch
 
 
 def load_config(config_path: Path) -> dict[str, Any]:
@@ -53,5 +57,32 @@ def set_seed(seed: int) -> None:
     - Seed Python `random`, NumPy, and PyTorch.
     - Configure deterministic PyTorch behavior where appropriate.
     """
-    raise NotImplementedError("Seed setup is not implemented yet.")
+    random.seed(seed)
+    numpy.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+        torch.cuda.manual_seed(seed)
 
+def get_device(config:dict) -> torch.device:
+    """Get a PyTorch device.
+    Args:
+        config: 配置字典，包含 training.device 字段
+            支持的值: "auto", "cpu", "cuda", "cuda:0", "cuda:1" 等
+
+    Returns:
+        torch.device: PyTorch 设备对象"""
+    device_str = config.get("device", {}).get("device", "auto")
+    if device_str == "auto":
+        device_str = "cuda" if torch.cuda.is_available() else "cpu"
+
+    return torch.device(device_str)
+
+def ensure_dir(path):
+    path = Path(path)
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+def save_json(data, path):
+
+def
