@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local datasets
+data/train/
+data/val/
+data/test/
+data/raw/
+
+# Model checkpoints
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.onnx
+
+# Generated outputs
+outputs/*
+!outputs/README.md
+
+# Experiment logs
+runs/
+wandb/
+mlruns/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
