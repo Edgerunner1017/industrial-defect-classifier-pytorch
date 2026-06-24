@@ -75,15 +75,36 @@ Use stratified splitting so each class appears in all splits when possible.
 
 ## Dataset Notes
 
-Fill this section after selecting the exact dataset:
+Current dataset:
 
 ```text
-Dataset name:
-Source URL:
-License:
-Number of classes:
-Number of images:
-Image size:
-Official split:
-Local path:
+Dataset name: NEU-CLS surface defect dataset
+Source URL: local download
+License: check the original download source before redistribution
+Number of classes: 6
+Number of images: 1800
+Image format: BMP
+Original local path: C:\Users\Wuzheng\Desktop\NEU-CLS\NEU-CLS
+Prepared local path: data/
+Official split: none in the downloaded folder
+Prepared split: train 70%, val 15%, test 15%
+Split seed: 42
+```
+
+Prepared class counts:
+
+```text
+class           train  val  test  total
+crack             210   45    45    300
+inclusion         210   45    45    300
+patches           210   45    45    300
+pitted_surface    210   45    45    300
+rolled_scale      210   45    45    300
+scratch           210   45    45    300
+```
+
+The dataset was prepared with:
+
+```bash
+python scripts/split_neu_cls.py --source "C:\Users\Wuzheng\Desktop\NEU-CLS\NEU-CLS" --output data
 ```
